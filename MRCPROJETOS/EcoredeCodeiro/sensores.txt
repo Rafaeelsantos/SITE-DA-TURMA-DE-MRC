@@ -1,0 +1,4 @@
+{
+  "alturaAgua": "110 cm",
+  "qualidadeAgua": "10"
+}
