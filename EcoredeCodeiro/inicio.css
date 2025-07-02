@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: rgb(218, 216, 214);
+}
+
+.headeer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #292121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+    /* ocupa a altura do .logo */
+    width: auto;
+    transform: scale(1.2);
+    /* aumenta visualmente */
+    transform-origin: left center;
+    /* mantém ancorada à esquerda */
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+    opacity: 0.6;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/*BANNER*/
+.hero {
+    margin-top: 100px;
+    /* evita que o banner fique escondido */
+    width: 100vw;
+    height: 600px;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagens/corregoUrbano.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* empilha título e subtítulo verticalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-background h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.hero-background p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.25rem;
+    max-width: 600px;
+    /* limita largura para facilitar leitura */
+    margin: 0 auto;
+    color: white;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+
+/*FORMATAÇÃO DOS TEXTOS*/
+.intro {
+    max-width: 1200px;
+    /* antes era 800px */
+    margin: 60px auto;
+    padding: 60px 40px;
+    /* pode ajustar também */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    text-align: justify;
+    color: #000000;
+}
+
+
+/*CARROSEL DE IMAGENS*/
+.carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;
+    height: 500px;
+    /* aumente aqui (antes era 300px) */
+    overflow: hidden;
+}
+
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 70%;
+    /* também aumentamos a largura máxima */
+    height: 100%;
+}
+
+.carrossel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* cobre todo o espaço sem distorcer */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.carrossel-img.active {
+    opacity: 1;
+}
+
+
+/*MONITORAMENTO*/
+.monitoramento {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+.monitoramento h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1f2d2d;
+}
+
+.monitoramento p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.cartoes {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    /* mais espaço entre os cartões */
+    flex-wrap: nowrap;
+    /* impede quebra */
+}
+
+.cartao {
+    width: 5000px;
+    /* bem mais largo */
+    padding: 40px;
+    /* mais espaço interno */
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #1f2d2d;
+    flex-shrink: 1;
+}
+
+.cartao h3 {
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.cartao strong {
+    font-size: 4.2rem;
+    margin-top: 24px;
+    font-weight: 800;
+}
+
+.cartao span {
+    font-size: 1.5rem;
+    margin-top: 14px;
+    color: #333;
+}
+
+.cartao .valor-anterior {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #c04e0b;
+    /* tom neutro para parecer valor anterior */
+    margin-bottom: 6px;
+}
+
+
+
+
+
+
+/* Cartão azul */
+.cartao.agua {
+    background-color: #d5eafc;
+}
+
+.cartao.agua .icone svg {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 12px;
+    fill: #0077c2;
+    /* azul escuro */
+}
+
+/* Cartão verde */
+.cartao.qualidade {
+    background-color: #d9f3e5;
+}
+
+.cartao.qualidade .icone svg {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 12px;
+    fill: #2e7d32;
+    /* verde escuro */
+}
+
+
+
+/*TABELA DE INFORMAÇÃO*/
+.tabela-container {
+  width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalhos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header {
+  width: 50%;
+  position: relative;
+}
+
+.header .circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  position: relative;
+  top: -20px;
+  z-index: 2;
+}
+
+.header.blue .circle {
+  background-color: #2196F3;
+}
+
+.header.brown .circle {
+  background-color: #8D6E63;
+}
+
+.header .label {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.header.brown .label {
+  background-color: #8D6E63;
+}
+
+.ribbon {
+  background-color: #1e4d7b;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+}
+
+.ribbon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-left: 20px solid transparent;
+  border-top: 20px solid #1e4d7b;
+  border-bottom: 20px solid #1e4d7b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 14px;
+  background-color: #f0f4f8;
+  font-size: 14px;
+}
+
+td:first-child {
+  border-right: none;
+}
+
+td:last-child {
+  border-left: none;
+}

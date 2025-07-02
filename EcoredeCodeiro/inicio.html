@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inicio.css">
+    <title>EcoRede Cordeiro</title>
+</head>
+
+<body>
+
+    <header class="headeer">
+        <div class="logo">
+            <img src="imagens/ERC.png" alt="Logo" />
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#quemSomos">Quem Somos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="overlay"></div>
+            <h1>EcoRede Cordeiro</h1>
+            <p>Conecte-se ao W-FI, mas também á natureza. O Córrego do Cordeiro precisa da nossa atenção para continuar
+                fluindo vida.</p>
+        </div>
+    </section>
+
+
+    <section class="intro" id="quemSomos">
+        <h1>QUEM SOMOS?</h1>
+        <p>
+            Somos um grupo de estudantes participantes da Despertar, que gosta de tecnologia e se preocupa com a
+            natureza. Nosso projeto nasceu da ideia de juntar a internet com o cuidado pelo meio ambiente: por meio de
+            uma rede Wi-Fi especial, convidamos você a acessar um site que informa e faz pensar sobre o Córrego do
+            Cordeiro.
+        </p>
+
+        <p>
+            Além do Wi-Fi, também vamos usar um sensor para medir a qualidade da água do córrego. Assim, conseguimos
+            mostrar em tempo real como está o ambiente e por que ele precisa ser protegido. Tudo isso de um jeito
+            simples, que qualquer pessoa pode entender.
+        </p>
+
+        <p>
+            Nosso objetivo é fazer com que mais gente conheça o córrego, entenda sua importância e comece a cuidar dele.
+            Porque quando a gente se informa, a gente se importa. E quando a gente se importa.
+        </p>
+    </section>
+
+
+    <section class="carrossel">
+        <div class="carrossel-container">
+            <img src="imagens/corregoUrbano.webp" alt="Imagem 1" class="carrossel-img active">
+            <img src="imagens/ilhasfiltrantes.jpg" alt="Imagem 2" class="carrossel-img">
+        </div>
+    </section>
+
+
+    <section class="intro" id="sobre">
+        <h1> Conheça o Córrego do Cordeiro:</h1>
+        <p>
+            O Córrego do Cordeiro está poluído. Durante muito tempo, ele foi esquecido e maltratado. Mas agora, isso
+            está mudando.
+        </p>
+
+        <p>
+            A Despertar junto com a comunidade e outras pessoas preocupadas com o meio ambiente, participou de um
+            mutirão de revitalização. A ação trouxe vida nova ao córrego e despertou a importância de cuidar do que é
+            nosso.
+        </p>
+
+        <p>
+            Este site é um jeito de mostrar o que está acontecendo. Aqui você vai ver fotos reais do córrego e descobrir
+            que, mesmo com tantos problemas, ele pode renascer com a nossa ajuda.
+        </p>
+
+        <p>
+            O córrego é parte da nossa história, do nosso bairro e da nossa vida. E agora, a gente quer que ele seja
+            também parte do nosso futuro.
+        </p>
+    </section>
+
+
+    <section class="monitoramento">
+        <h2>Monitoramento em Tempo Real</h2>
+        <p>
+            Para cuidar do Córrego do Cordeiro, não basta só limpar — a gente também precisa
+            acompanhar o que está acontecendo com ele todos os dias.
+        </p>
+
+        <div class="cartoes">
+            <div class="cartao agua">
+                <h3>Altura da Água</h3>
+                <div class="icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M6 2a1 1 0 0 0-1 1v18a1 1 0 0 0 2 0v-2h2v-2H7v-2h2v-2H7v-2h2V9H7V7h2V5H7V3a1 1 0 0 0-1-1z" />
+                    </svg>
+                </div>
+                <strong id="altura-valor">100</strong> <!-- valor dinâmico -->
+                <strong id="altura-desc" class="descricao">Baixo</strong>
+                <span>Nível atual da água</span>
+            </div>
+
+            <div class="cartao qualidade">
+                <h3>Qualidade da Água</h3>
+                <div class="icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 6.44 5 10.14 5 13a7 7 0 0 0 14 0c0-2.86-3.13-6.56-7-11z" />
+                        <circle cx="10" cy="14" r="1" />
+                        <circle cx="13.5" cy="12" r="1" />
+                    </svg>
+                </div>
+                <strong id="qualidade-valor">10</strong> <!-- valor dinâmico -->
+                <strong id="qualidade-desc" class="descricao">Suja</strong>
+                <span>De acordo com o sensor de sujeira</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="tabela-container">
+        <div class="cabecalhos">
+            <div class="header blue">
+                <div class="circle"><i class="fas fa-water"></i></div>
+                <div class="label">Altura da Água</div>
+            </div>
+            <div class="header brown">
+                <div class="circle"><i class="fas fa-poop"></i></div>
+                <div class="label">Nível de Sujeira</div>
+            </div>
+        </div>
+
+        <div class="ribbon">Tabela de Altura e Sujeira</div>
+
+        <table>
+            <tr>
+                <td>120 cm</td>
+                <td>Baixo</td>
+            </tr>
+            <tr>
+                <td>250 cm</td>
+                <td>Médio</td>
+            </tr>
+            <tr>
+                <td>310 cm</td>
+                <td>Alto</td>
+            </tr>
+            <tr>
+                <td>145 cm</td>
+                <td>Baixo</td>
+            </tr>
+            <tr>
+                <td>270 cm</td>
+                <td>Alto</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+</body>
+
+<script src="carrosel.js"></script>
+<script src="sensores.js"></script>
+
+</html>
